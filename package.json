@@ -5,9 +5,11 @@
   "license": "MIT",
   "scripts": {
     "start": "babel-node app.js",
-    "screenshot": "babel-node screenshot.js"
+    "screenshot": "babel-node screenshot.js",
+    "getUrls": "babel-node urlFetcher.js"
   },
   "dependencies": {
+    "mongoose": "^5.6.3",
     "puppeteer": "^1.18.1",
     "tesseract.js": "^2.0.0-alpha.11"
   },
