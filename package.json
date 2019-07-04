@@ -1,0 +1,20 @@
+{
+  "name": "tesseract",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "babel-node app.js",
+    "screenshot": "babel-node screenshot.js"
+  },
+  "dependencies": {
+    "puppeteer": "^1.18.1",
+    "tesseract.js": "^2.0.0-alpha.11"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.0",
+    "@babel/node": "^7.5.0",
+    "@babel/preset-env": "^7.5.0"
+  }
+}

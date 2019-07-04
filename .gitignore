@@ -1,0 +1,5 @@
+node_modules
+.DS_Store
+eng.traineddata
+text.text
+website.png
