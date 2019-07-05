@@ -3,7 +3,7 @@ import { SenateCandidate, Senator, Fara } from "./mongodb/schemas";
 
 export const getSenatorUrls = async () => {
     const db = await loadDB();
-    const res = await Senator.find({});
+    const res = await Senator.find({ last: "Alexander" });
     const urls = res.map((senator) => {
         senator = senator.toObject();
         return { id: senator._id, url: senator.link.url };
@@ -27,6 +27,14 @@ export const getSenateCandidateUrls = async () => {
 
 };
 
-getSenateCandidateUrls()
-    .then(res => console.log(res))
-    .catch(err => console.log(err));
+export const getFaraUrls = async () => {
+    const db = await loadDB();
+    const res = await Fara.find({});
+    const urls = res.map((fara) => {
+        fara = fara.toObject();
+        return { id: fara._id, urls: fara.allLinks.map(link => link.url) };
+    });
+
+    await db.disconnect();
+    return urls;
+};

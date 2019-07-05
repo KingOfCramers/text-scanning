@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "scanner": "babel-node scanner.js",
     "start": "babel-node app.js",
-    "screenshot": "babel-node screenshot.js",
     "getUrls": "babel-node urlFetcher.js"
   },
   "dependencies": {
